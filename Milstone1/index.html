@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+	<title>Pizza Aquarium</title>
+    <style>
+		
+		body {
+			color: #878787;
+			margin: 0;
+			font-family: 'Gentium Basic', serif;
+			text-align: center;
+		}
+		h1 {
+        font-size: 70px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: normal;
+		text-shadow: 4px 4px #C04000;
+      }
+	  
+	    h2 {
+         font-size: 55px;
+		    color: white;
+		    text-shadow: 2px 2px #C04000;
+	    }
+    </style>
+</head>
+
+<body>
+  <!-- Nav Bar start -->
+	<div class="w3-top">
+		<div class="w3-bar w3-red  w3-card">
+			<a href="javascript:void(0)" onclick="myFunction()" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-large w3-hide-medium w3-hover-orange"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="w3-bar-item w3-button  w3-padding-large w3-hover-orange">HOME</a>
+			<a href="explore.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-orange">EXPLORE</a>
+			<div class="w3-dropdown-hover w3-hover-orange w3-hide-small">
+                <button class="w3-padding-large w3-red w3-button w3-hover-orange" title="EXPLORE">STYLES <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-red w3-bar-block w3-card-4">
+                    <a href="neapolitian.html" class="w3-bar-item w3-button w3-red w3-hover-orange">Neapolitan Pizza</a>
+                    <a href="sicilian.html" class="w3-bar-item w3-button w3-red w3-hover-orange">Sicilian Pizza</a>
+                    <a href="newyork.html" class="w3-bar-item w3-button w3-red w3-hover-orange">New York-Style Pizza</a>
+                </div>
+            </div>
+			<a href="contectus.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-orange">CONTACT US</a>
+		</div>
+	</div>
+	
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-bar-block w3-red w3-top" style="margin-top:46px">
+    <a href="explore.html" class="w3-bar-item w3-button w3-padding-large w3-hover-orange">EXPLORE</a>
+    <a href="contectus.html" class="w3-bar-item w3-button w3-padding-large w3-hover-orange">CONTACT US</a>
+  </div>
+<!-- Navigation Bar End -->
+
+<!-- Picture, Header -->
+  <div class="w3-content" style="max-width:2000px;">
+    <div class="w3-display-container">
+      <img src="imgs/title.png" alt="" style="width: 100%">
+      <div class="w3-display-middle w3-text-white w3-padding-32">
+		<h1 class="w3-hide-small">Pizza Aquarium</h1>
+		<h1 class="w3-hide-large w3-hide-medium w3-jumbo">Pizza Aquarium</h1>
+		<h2 class="w3-hide-small">The Library of Pizza for Everyones Taste</h2>
+		<h2 class=" w3-wide w3-hide-large w3-hide-medium w3-xlarge">The Library of Pizza for Everyones Taste</h2>
+      </div>
+    </div>
+   </div>
+<!-- Picture, Header End -->
+
+<!-- Content start -->
+    <div class="w3-content w3-center w3-padding-32">
+      <p class="w3-xlarge w3-justify">Pizza Aquarium is a collection of different pizza from all around the world! Explore new recipes, find something you would love to try, and enjoy the best food in the world.</p>
+       <a href="explore.html" class="w3-button w3-hover-orange w3-xxlarge w3-round-large w3-red">Explore More</a>
+    </div>
+
+    <div class="w3-container w3-content w3-middle w3-row-padding w3-left-align">
+        <div class="w3-half">
+          <img src="./index_files/card1.jpg" class="w3-round" alt="Pizza" style="width:100%">
+          <h3 class="w3-xlarge">General Information</h3>
+            <ol class="w3-large">
+                <li>Pizza is a traditional Italian dish</li>
+                <li>The term pizza was first recorded in the 10th century</li>
+                <li>Modern pizza was invented in Naples</li>
+                <li>Pizza is one of the most popular foods in the world</li>
+            </ol> 
+        </div>
+		
+        <div class="w3-half">
+          <img src="./index_files/card2.jpg" class="w3-round padding-32" alt="Pizza" style="width:77%">
+          <h3 class="w3-xlarge">National Pizza Month</h3>
+            <ol class="w3-large">
+                <li>Celebrated in October in the United States and Canada</li>
+                <li>It started in October 1984</li>
+                <li>It was creted by Gerry Durnell, the publisher of Pizza Today magazine</li>
+            </ol>
+        </div>
+    </div>
+
+        <div class="w3-bar w3-red">
+	      <p>© 2018 Pizza Aquarium</p>
+	    </div>
+<!-- Content End -->
+
+    <script>
+	
+		var myIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 3000);
+        }
+		
+      function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+
+
+
+
+</body>
+</html>

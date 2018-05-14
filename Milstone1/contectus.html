@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+	<title>Pizza Aquarium</title>
+    <style>
+		
+		body {
+			color: #878787;
+			margin: 0;
+			font-family: 'Gentium Basic', serif;
+			text-align: center;
+		}
+		h1 {
+        font-size: 75px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: normal;
+		text-shadow: 4px 4px #C04000;
+      }
+	  
+	    h2 {
+         font-size: 55px;
+		    text-shadow: 2px 2px #C04000;
+	    }
+    </style>
+</head>
+
+<body>
+  <!-- Nav Bar start -->
+	<div class="w3-top">
+		<div class="w3-bar w3-red  w3-card">
+			<a href="javascript:void(0)" onclick="myFunction()" class="w3-bar-item w3-button w3-padding-large w3-right w3-hide-large w3-hide-medium w3-hover-orange"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="w3-bar-item w3-button  w3-padding-large w3-hover-orange">HOME</a>
+			<a href="explore.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-orange">EXPLORE</a>
+			<div class="w3-dropdown-hover w3-hover-orange w3-hide-small">
+                <button class="w3-padding-large w3-red w3-button w3-hover-orange" title="EXPLORE">STYLES <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-red w3-bar-block w3-card-4">
+                    <a href="neapolitian.html" class="w3-bar-item w3-button w3-red w3-hover-orange">Neapolitan Pizza</a>
+                    <a href="sicilian.html" class="w3-bar-item w3-button w3-red w3-hover-orange">Sicilian Pizza</a>
+                    <a href="newyork.html" class="w3-bar-item w3-button w3-red w3-hover-orange">New York-Style Pizza</a>
+                </div>
+            </div>
+			<a href="contectus.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-orange">CONTACT US</a>
+		</div>
+	</div>
+	
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-bar-block w3-red w3-top" style="margin-top:46px">
+    <a href="explore.html" class="w3-bar-item w3-button w3-padding-large w3-hover-orange">EXPLORE</a>
+    <a href="contectus.html" class="w3-bar-item w3-button w3-padding-large w3-hover-orange">CONTACT US</a>
+  </div>
+<!-- Navigation Bar End -->
+
+   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-text-green w3-center">CONTACT</h2>
+    <p class="w3-text-black w3-center"><i>Have any questions? Let us know!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Boston, US<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: 978-435-9696<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: pizzaquarium@gmail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-hover-orange w3-xlarge w3-round-large w3-red w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+
+
+    <div class="w3-bar w3-red">
+      <p>© 2018 Pizza Aquarium</p>
+    </div>
+
+    <script>
+	
+		var myIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 3000);
+        }
+		
+      function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+
+
+
+
+</body>
+</html>
